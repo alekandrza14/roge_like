@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4221801137823065272}
   - component: {fileID: 5060853174052363914}
   - component: {fileID: -8258218005027739545}
+  - component: {fileID: -2421596371482160744}
   m_Layer: 0
   m_Name: electro 4_7
   m_TagString: Untagged
@@ -149,3 +150,15 @@ MonoBehaviour:
   damage: {fileID: 5056972418122909572, guid: aa7e665ea744ee54e9d96c43b851acbd, type: 3}
   blood: {fileID: 8856874531793297384, guid: 280d86a96f556ad419cc5abfb1999628, type: 3}
   multyply: 4
+--- !u!114 &-2421596371482160744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5767747278861516828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cdc5640726af884884bc55021b9b370, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

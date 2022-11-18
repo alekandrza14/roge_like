@@ -21,7 +21,9 @@ public class core : MonoBehaviour
                 Instantiate(phisics[i], transform.position, Quaternion.identity);
             }
             @event.destroycore = true;
+            global.syier += 1;
             Destroy(gameObject);
+            
         }
     }
 

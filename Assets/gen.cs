@@ -15,7 +15,30 @@ public class global
 {
     static public Vector2Int point;
     static public Vector2Int move;
+    static public decimal syier;
     public static bool attack;
+    static public string[] skils;
+    public static bool autoclick;
+    public static int termo;
+    static public bool getskil(string skil)
+    {
+        if (skils != null)
+        {
+            if (skils.Length != 0)
+            {
+
+
+                for (int i = 0; i < skils.Length; i++)
+                {
+                    if (skils[i] == skil)
+                    {
+                        return true;
+                    }
+                }
+            }
+        }
+            return false;
+    }
 }
 
 public class gen : MonoBehaviour
@@ -26,6 +49,7 @@ public class gen : MonoBehaviour
     public Vector2Int sideroom;
     public int idfoor;
     public float scale;
+    bool generate;
     public void Rand()
     {
         scale += Random.Range(0, 0.01f);
@@ -44,6 +68,7 @@ public class gen : MonoBehaviour
             sideroom = sr.sideroom;
             scale = sr.scale;
             idfoor = sr.idfoor;
+            generate = true;
 
         }
     }
@@ -105,13 +130,31 @@ public class gen : MonoBehaviour
     }
     private void Start()
     {
-        if (idfoor == 2)
+        if (idfoor == 2 && !generate)
         {
-            if (Random.Range(0,6) ==0 )
+            if (Random.Range(0, 3) == 0)
             {
                 Vector2Int v2i = new Vector2Int(Random.Range(0, sizeroom.x), Random.Range(0, sizeroom.y));
-               GameObject g =  Instantiate(items[0],new Vector3(v2i.x, v2i.y,0),Quaternion.identity);
-                g.transform.position -= new Vector3(sizeroom.x/2, sizeroom.y/2);
+                GameObject g = Instantiate(items[0], new Vector3(v2i.x, v2i.y, 0), Quaternion.identity);
+                g.transform.position -= new Vector3(sizeroom.x / 2, sizeroom.y / 2);
+            }
+        }
+        if (idfoor == 0)
+        {
+            if (Random.Range(0, 20) == 0)
+            {
+                Vector2Int v2i = new Vector2Int(Random.Range(0, sizeroom.x), Random.Range(0, sizeroom.y));
+                GameObject g = Instantiate(items[1], new Vector3(v2i.x, v2i.y, 0), Quaternion.identity);
+                g.transform.position -= new Vector3(sizeroom.x / 2, sizeroom.y / 2);
+            }
+        }
+        if (idfoor == 2 && generate)
+        {
+            if (Random.Range(0, 40) == 0)
+            {
+                Vector2Int v2i = new Vector2Int(Random.Range(0, sizeroom.x), Random.Range(0, sizeroom.y));
+                GameObject g = Instantiate(items[0], new Vector3(v2i.x, v2i.y, 0), Quaternion.identity);
+                g.transform.position -= new Vector3(sizeroom.x / 2, sizeroom.y / 2);
             }
         }
         for (int x = 0; x < sizeroom.x; x++)

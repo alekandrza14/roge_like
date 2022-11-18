@@ -77,7 +77,7 @@ public class exit : MonoBehaviour
                 @event.destroycore = false;
             }
         }
-        if (tic >= 1 && dist >= 2.6f)
+        if (tic >= 1 && dist >= 2.6f && FindObjectsOfType<NOSPAWN>().Length ==0)
         {
 
 

@@ -3,10 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-
    public class @event
-    {
-    static public bool destroycore;
-    }
-
+   {
+       static public bool destroycore;
+   }
